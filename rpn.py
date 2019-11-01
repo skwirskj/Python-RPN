@@ -1,15 +1,28 @@
+
+import operator
+
+operators = {
+    '+': operator.add,
+    '-': operator.sub,
+}
+
 def calculate(arg):
     stack = list()
     for token in arg.split():
-        if token == '+':
+        try:
+            value = int(token)
+            stack.append(value)
+        except ValueError:
+            function = operators[token]
             arg1 = stack.pop()
             arg2 = stack.pop()
-            result = arg1 + arg2
+            result = function(arg1, arg2)
             stack.append(result)
-        else:
-            stack.append(int(token))
 
-        print(stack)
+
+        #print(stack)
+    if len(stack) != 1:
+        raise TypeError('malformed input')
     return stack.pop()
 
 def main():
