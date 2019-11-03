@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 def greeting():
     hello = "Guten Tag!"
-    print(f"{hello}\n")
+    print(hello)
 
 def story(arg):
     story = "Once upon a time there was"
