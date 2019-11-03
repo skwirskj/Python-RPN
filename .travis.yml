@@ -3,5 +3,7 @@ python:
   - "2.7"
   - "3.6"
 cache: pip
+install:
+  - pip3 install termcolor
 script:
   - make test
