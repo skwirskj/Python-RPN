@@ -34,3 +34,27 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+def greeting():
+    hello = "Guten Tag!"
+    print(f"{hello}\n")
+
+def story(arg):
+    story = "Once upon a time there was"
+    story += arg1
+    return story
+
+def linearFunction(x, m, b):
+    y = m*x
+    y += b
+    return y
+
+def slope(rise, run):
+    slope = rise / run
+    return slope
+
+def grade(hw, exam, pres):
+    grade = (hw * 0.2)
+    grade += (exam * 0.5)
+    grade += (pres * 0.3)
+    return grade

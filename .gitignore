@@ -1,2 +1,7 @@
 *.pdf
 *.pyc
+*.js
+*.json
+*.html
+*.css
+*.png
