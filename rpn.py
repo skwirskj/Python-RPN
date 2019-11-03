@@ -1,5 +1,7 @@
 
 import operator
+import readline
+from termcolor import colored, cprint
 
 operators = {
     '+': operator.add,
@@ -30,7 +32,12 @@ def calculate(arg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print(result)
+        if result > 0:
+            cprint(result, 'magenta')
+        elif result < 0:
+            cprint(result, 'green')
+        else:
+            cprint(result, 'blue')
 
 if __name__ == '__main__':
     main()
