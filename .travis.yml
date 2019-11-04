@@ -3,6 +3,7 @@ python:
   - "3.6"
 cache: pip
 install:
-  - pip3 install termcolor
+  - pip3 install termcolor coverage
 script:
-  - make test
+  - coverage run -m unittest
+  - coverage report
