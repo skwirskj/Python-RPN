@@ -65,3 +65,6 @@ def grade(hw, exam, pres):
     grade += (exam * 0.5)
     grade += (pres * 0.3)
     return grade
+
+def read(input):
+    return input
